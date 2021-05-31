@@ -4,13 +4,14 @@
   "description": "news-back",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "start": "cross-env node dist/index.js",
+    "postinstall": "tsc",
     "compile": "ts-node build.ts && tsc",
     "dev": "nodemon server/index.ts | pino-pretty",
     "dev:debug": "nodemon --exec \"node -r ts-node/register --inspect-brk\" server/index.ts | pino-pretty",
-    "test": "cross-env NODE_ENV=test mocha test/**/*.ts --exit",
-    "test:debug": "cross-env NODE_ENV=test mocha --inspect-brk test/**/*.ts --exit",
-    "test:junit": "cross-env NODE_ENV=test mocha test/**/*.ts --reporter mocha-junit-reporter --reporter-options mochaFile=./test/test-results.xml --exit",
+    "test": "cross-env mocha test/**/*.ts --exit",
+    "test:debug": "cross-env mocha --inspect-brk test/**/*.ts --exit",
+    "test:junit": "cross-env mocha test/**/*.ts --reporter mocha-junit-reporter --reporter-options mochaFile=./test/test-results.xml --exit",
     "lint": "eslint -c .eslintrc.js \"{server, test}/**/*.{js,ts,tsx}\" --quiet",
     "lint:fix": "eslint -c .eslintrc.js \"{server, test}/**/*.{js,ts,tsx}\" --quiet --fix",
     "typecheck": "tsc --noUnusedLocals"
