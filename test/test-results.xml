@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="15.0030" tests="0" failures="1">
+  <testsuite name="Root Suite" timestamp="2021-05-31T11:17:03" tests="0" time="15.0030" failures="1">
+    <testcase name="&quot;before all&quot; hook in &quot;{root}&quot;" time="15.0030" classname="&quot;before all&quot; hook in &quot;{root}&quot;">
+      <failure message="Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves." type="Error"><![CDATA[Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.
+    at createTimeoutError (D:\MiPC\Documentos\Estudios\Projects\news\src\back\node_modules\mocha\lib\errors.js:498:15)
+    at Hook.Runnable._timeoutError (D:\MiPC\Documentos\Estudios\Projects\news\src\back\node_modules\mocha\lib\runnable.js:431:10)
+    at Timeout.<anonymous> (D:\MiPC\Documentos\Estudios\Projects\news\src\back\node_modules\mocha\lib\runnable.js:246:24)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
